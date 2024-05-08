@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Sobre | Nuria Casabán" description="Sobre Nuria Casabán">
+	<div class="stack gap-20">
+	  <main class="wrapper about">
+		<Hero
+		  title="Sobre mí"
+		  tagline='Apasionada por la naturaleza y muchas cosas más. Aún en proceso de conocer mis hobbies...'
+		/>
+		<div class="image">
+			<img
+			  width="350"
+			  height="150"
+			  src="/public/assets/about.webp"
+			  alt="sobre mí..."
+			/>
+		  </div>
+		<section class="about-content">
+		  <div class="trayectoria">
+			<div class="text">
+			  <h2 class="section-title">Mi trayectoria</h2>
+			  <p>
+				Empecé mis inicios laborales en el campo de la psicología social con personas con discapacidad intelectual. Posteriormente quise empezar en el mundo de los recursos humanos seleccionando talento humano y realizando la administración del personal de la empresa, entre otras funciones. Pero, desde hace dos años, cambié mi orientación laboral al mundo tech, elegí una formación en desarrollo de aplicaciones multiplataforma y actualmente me encuentro aprendiendo y adquiriendo conocimientos. Aún estoy en <em>'construcción'</em>.
+			  </p>
+			</div>
+		  </div>
+		</section>
+		<section class="about-content">
+		  <h2 class="section-title">Educación</h2>
+		  <div class="content">
+			<p>Desarrollo Aplicaciones Multiplataforma<p>
+			<p>Psicología</p>
+			<p>Atención a personas con discapacidad</p>
+			<p>Gestión del talento y recursos humanos</p>
+		  </div>
+		</section>
+		<section class="about-content">
+		  <h2 class="section-title">Habilidades</h2>
+		  <div class="content">
+			<p>Office 365</p>
+			<p>Eclipse, Visual Studio, Android Studio</p>
+			<p>Java, PHP</p>
+			<p>HTML, CSS, Javascript, Typescript</p>
+		  </div>
+		</section>
+	  </main>
+  
+	  <ContactCTA />
+	</div>
+  </BaseLayout>
+  
+  <style>
+	.about {
+	  display: flex;
+	  gap: 3.5rem;
+	}
+  
+	.about-content {
+	  display: flex;
+	  gap: 0.5rem;
+	  color: var(--gray-200);
+	}
+  
+	.trayectoria {
+	  display: flex;
+	
+	  gap: 1rem;
+	  max-width: 100%; 
+	  margin: 0 auto; 
+	}
+  
+  
+	.section-title {
+	  font-size: var(--text-xl);
+	  color: var(--gray-0);
+	}
+  
+	.content {
+	  font-size: var(--text-lg);
+	}
+  
+	img {
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+		max-width: 100%;
+		display: block; 
+		margin: 0 auto; 
+	}
+  
+	@media (min-width: 50em) {
+	  .about {
+		display: grid;
+		grid-template-columns: repeat(3, 2);
+		align-items: start;
+		gap: 3.5rem;
+	  }
+  
+	  .about-content h2 {
+		order: -1;
+		align-self: flex-start;
+	  }
+	}
+  </style>
+  
