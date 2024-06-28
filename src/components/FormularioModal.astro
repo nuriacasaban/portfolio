@@ -1,0 +1,21 @@
+---
+// src/components/FormularioModal.astro
+import Modal from './Modal.astro';
+export let showModal = false;
+export let closeModal = () => {};
+---
+
+<Modal {showModal} {closeModal}>
+  <form>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="description">Descripción:</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</Modal>
